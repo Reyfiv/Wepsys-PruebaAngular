@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-body">
+        <form (ngSubmit)="Eliminar()" autocomplete="off" [formGroup]="FormEliminar">
+            <input [value]="Persona.id" hidden="true" formControlName="id" type="text" class="form-control" id="id" placeholder="Reyfi">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input [value]="Persona.nombre" formControlName="nombre" type="text" class="form-control" id="Nombre" placeholder="Reyfi">
+            </div>
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input [value]="Persona.apellido" formControlName="apellido" type="text" class="form-control" id="apellido" placeholder="Vasquez">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input [value]="Persona.email" formControlName="email" type="text" class="form-control" id="email" placeholder="email@ejemplo.com">
+            </div>
+            <div class="d-flex float-end">
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary me-md-2" type="button" routerLink="nuevo">Cancelar</button>
+                </div>
+                <div class="d-grid gap-2 d-md-flex">
+                    <button class="btn btn-danger me-md-2" type="submit">Eliminar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

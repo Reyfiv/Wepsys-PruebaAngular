@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="card-body">
+        <form (ngSubmit)="Guardar()" autocomplete="off" [formGroup]="FormNuevo">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input formControlName="nombre" type="text" class="form-control" id="Nombre" placeholder="Reyfi">
+                <span class="form-text text-danger" *ngIf="campoNoValido('nombre')">Debe contener almenos 3 letras </span>
+            </div>
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input formControlName="apellido" type="text" class="form-control" id="apellido" placeholder="Vasquez">
+                <span class="form-text text-danger" *ngIf="campoNoValido('apellido')">Debe contener almenos 3 letras</span>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input formControlName="email" type="email" class="form-control" id="email" placeholder="email@ejemplo.com">
+                <span class="form-text text-danger" *ngIf="campoNoValido('email')">Debe contener un correo valido</span>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary me-md-2" type="submit">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>
